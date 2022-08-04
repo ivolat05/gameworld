@@ -13,11 +13,13 @@ const imagemin = require("gulp-imagemin");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const rigger = require("gulp-rigger");
-const sass = require("gulp-sass");
 const removeComments = require("gulp-strip-css-comments");
 const uglify = require("gulp-uglify");
 const panini = require("panini");
 const del = require("del");
+const cssmin = require('gulp-cssmin');
+
+
 
 
 var path = {
@@ -31,14 +33,14 @@ var path = {
 	src: {
 		html: "src/*.html",
 		js: "src/assets/js/*.js",
-		css: "src/assets/sass/style.scss",
+		css: "src/assets/css/*.css",
 		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico,xml,webmanifest}",
 		fonts: "src/assets/font/*.{ttf,woff,woff2,eot,svg}"
 	},
 	watch: {
 		html: "src/**/*.html",
 		js: "src/assets/js/**/*.js",
-		css: "src/assets/sass/**/*.scss",
+		css: "src/assets/css/**/*.css",
 		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico,xml,webmanifest}",
 		fonts: "src/assets/font/*.{ttf,woff,woff2,eot,svg}"
 	},
@@ -81,11 +83,12 @@ function html() {
 
 
 function css() {
+
 	return src(path.src.css, {
-		base: "src/assets/sass/"
+		base: "src/assets/css/"
 	})
 		.pipe(plumber())
-		.pipe(sass())
+		.pipe(cssmin())
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 8 versions'],
 			cascade: true
@@ -108,6 +111,7 @@ function css() {
 		.pipe(dest(path.build.css))
 		.pipe(browsersync.stream());
 };
+
 
 function js() {
 	return src(path.src.js, {
