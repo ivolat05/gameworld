@@ -131,16 +131,16 @@ $(() => {
 
 	// slider
 
-	$(".doctor-slider").slick({
-		slidesToShow: 2,
+	$(".cases-slaider").slick({
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: false,
-		infinite: true,
+		infinite: false,
 		arrows: true,
 		// rows - удоляет пустые div
 		rows: 0,
-		nextArrow: $(".block__slick-next"),
-		prevArrow: $(".block__slick-prev"),
+		nextArrow: $(".cases-btn-next"),
+		prevArrow: $(".cases-btn-prev"),
 
 		responsive: [
 			{
