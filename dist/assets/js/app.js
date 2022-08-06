@@ -141,7 +141,6 @@ $(() => {
 		rows: 0,
 		nextArrow: $(".cases-btn-next"),
 		prevArrow: $(".cases-btn-prev"),
-
 		responsive: [
 			{
 				breakpoint: 1650,
@@ -173,4 +172,51 @@ $(() => {
 		]
 	});
 
+
+	// горизонтальный скролл
+	// boxWrapp- внешняя обертка контейнера горизонтальной прокрутки
+	//  boxWrappInner -внутреня обертка контейнера горизонтальной прокрутки
+	function scrollHorizont(boxWrapp, boxWrappInner) {
+		function init() {
+			setStickyContainersSize();
+			bindEvents();
+		}
+
+		function bindEvents() {
+			window.addEventListener("wheel", wheelHandler);
+		}
+
+		function setStickyContainersSize() {
+			document.querySelectorAll(`${boxWrapp}`).forEach(function (container) {
+				const stikyContainerHeight = container.querySelector(`${boxWrappInner}`).scrollWidth;
+				container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
+			});
+		}
+
+		function isElementInViewport(el) {
+			const rect = el.getBoundingClientRect();
+			return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+		}
+
+		function wheelHandler(evt) {
+
+			const containerInViewPort = Array.from(document.querySelectorAll(`${boxWrapp}`)).filter(function (container) {
+				return isElementInViewport(container);
+			})[0];
+
+			if (!containerInViewPort) {
+				return;
+			}
+
+			let isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
+			let isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
+			let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+			if (g_canScrollHorizontally) {
+				containerInViewPort.querySelector(`${boxWrappInner}`).scrollLeft += evt.deltaY;
+			}
+		}
+		init();
+	}
+	scrollHorizont('.team-wrapp', '.team-row');
 })
