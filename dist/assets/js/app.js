@@ -172,6 +172,31 @@ $(() => {
 		]
 	});
 
+	$(".clients-right").slick({
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		speed: 1000,
+		variableWidth: true
+
+	});
+
+	$(".clients-row-left").slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		speed: 1000,
+		rtl: true,
+		variableWidth: true
+	});
 
 	// горизонтальный скролл
 	// boxWrapp- внешняя обертка контейнера горизонтальной прокрутки
