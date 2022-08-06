@@ -42,6 +42,30 @@ $(() => {
 
 	accordionHover(".service-box")
 
+	// accordion
+	// button контейнер содержащий тело аккордиона
+	function accordionClick(button) {
+		let btnActive = document.querySelectorAll(`${button}`);
+		if (btnActive) {
+			btnActive.forEach(item => {
+				item.addEventListener('click', () => {
+					let panel = item.lastElementChild;
+					for (let i = 0; i < btnActive.length; i++) {
+						if (btnActive[i].classList.contains('active')) {
+							btnActive[i].classList.remove('active')
+							btnActive[i].lastElementChild.style.maxHeight = null;
+						}
+					}
+					item.classList.add('active');
+					panel.style.maxHeight = panel.scrollHeight + "px";
+
+				})
+			})
+		}
+	}
+
+	accordionClick(".quest-box")
+
 	// валидация
 
 	$('.mask-tell').inputmask("+7 (999) 999-9999", {
@@ -196,6 +220,26 @@ $(() => {
 		speed: 1000,
 		rtl: true,
 		variableWidth: true
+	});
+
+	$(".reviews-slaider").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: false,
+		arrows: true,
+		nextArrow: $(".reviews-box-next"),
+		prevArrow: $(".reviews-box-prev"),
+		responsive: [
+			{
+				breakpoint: 160,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+
+		]
 	});
 
 	// горизонтальный скролл
