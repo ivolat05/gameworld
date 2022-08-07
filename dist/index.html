@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="assets/css/main.min.css">
 	<link rel="stylesheet" href="assets/css/global.min.css">
 	<link rel="stylesheet" href="assets/css/index.min.css">
+	<link rel="stylesheet" href="assets/css/modal.min.css">
 </head>
 
 <body>
@@ -109,8 +110,8 @@
 							которому не нужен отдел продаж
 						</p>
 		
-						<a aria-label="Записаться на консультацию" href=""
-							class="main-btn button d-none d-flex align-items-center justify-content-center">
+						<a aria-label="Записаться на консультацию" href="#popup"
+							class="main-btn open-modal button d-none d-flex align-items-center justify-content-center">
 							Записаться на консультацию
 						</a>
 					</div>
@@ -142,7 +143,8 @@
 								из 20 человек - журналисты Коммерсанта, ТАСС и Forbes и PR-менеджеры с экспертизой от 5 лет. Мы
 								умеем системно работать с большими компаниями, с душой погружаемся в задачи стартапов и
 								деликатно подходим к работе с личным брендом.
-							</p><a aria-label="записаться на консультацию" href="#" class="button about-btn">
+							</p>
+							<a aria-label="записаться на консультацию" href="#popup" class="button open-modal about-btn">
 								записаться на консультацию
 							</a>
 						</div>
@@ -563,7 +565,7 @@
 		</section>
 		<section class="process process-padding">
 			<div class="container">
-				<a href="#" aria-label="узнать больше" class="button process-link">
+				<a href="#popup" aria-label="узнать больше" class="button open-modal  process-link">
 					узнать больше
 				</a>
 				<h3 class="process-title">
@@ -1403,9 +1405,10 @@
 					<input type="text" name="name" class="forms-input d-block" placeholder="Имя">
 					<input type="tel" name="phone" class="forms-input d-block mask-tell" placeholder="Телефон">
 					<input type="hidden" name="form" value="Получи бесплатную консультацию">
-					<button aria-label="Отправить" class="forms-btn d-flex align-items-center justify-content-center">
+					<a href="#send" aria-label="Отправить" type="submit"
+						class="forms-btn open-modal d-flex align-items-center justify-content-center">
 						Отправить
-					</button>
+					</a>
 				</form>
 			</div>
 		</section>
@@ -1441,6 +1444,55 @@
 				</div>
 			</div>
 		</footer>
+	
+	</div>
+	<div id="popup" class="popup mfp-hide">
+		<button aria-label="закрыть окно" class="popup-close">
+			<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect class="popup-svg" x="11.5493" y="36.2983" width="35" height="1.55556"
+					transform="rotate(-45 11.5493 36.2983)" fill="#939393" />
+				<rect class="popup-svg" x="36.8477" y="37.3984" width="35" height="1.55556"
+					transform="rotate(-135 36.8477 37.3984)" fill="#939393" />
+			</svg>
+		</button>
+		<h3 class="popup-title">
+			Запишись на консультацию
+		</h3>
+		<form id="form-1" action="/" class="popup-form">
+			<h4 class="popup-form-title">
+				Ваше имя
+			</h4>
+			<input type="text" name="name" class="popup-input">
+			<h4 class="popup-form-title">
+				Номер телефона
+			</h4>
+			<input type="tel" name='phone' class="mask-tell popup-input">
+			<input type="hidden" name="form" value="Получи бесплатную консультацию">
+			<a href="#send" aria-label="записаться" type="submit" class="popup-btn open-modal ">
+				записаться
+			</a>
+		</form>
+		<p class="popup-text">
+			Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой
+			конфиденциальности.
+		</p>
+	</div>
+	<!--заявка принита-->
+	<div id="send" class="sent mfp-hide d-flex flex-column align-items-center justify-content-center">
+		<button aria-label="закрыть окно" class="popup-close">
+			<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect class="popup-svg" x="11.5493" y="36.2983" width="35" height="1.55556"
+					transform="rotate(-45 11.5493 36.2983)" fill="#939393" />
+				<rect class="popup-svg" x="36.8477" y="37.3984" width="35" height="1.55556"
+					transform="rotate(-135 36.8477 37.3984)" fill="#939393" />
+			</svg>
+		</button>
+		<h3 class="sent-title text-center">
+			Ваша заявка принята!
+		</h3>
+		<p class="sent-text text-center">
+			В ближайшее время наш менеджер свяжется с вами и ответит на все вопросы!
+		</p>
 	</div>
 	
 	<script src="assets/js/app.min.js"></script>

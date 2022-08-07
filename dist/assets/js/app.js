@@ -99,28 +99,6 @@ $(() => {
 			},
 			errorPlacement: function (error, element) {
 				return;
-			},
-			submitHandler: function () {
-				var that = this;
-				$.ajax({
-					type: 'POST',
-					url: 'sendmail.php',
-					data: $(that.currentForm).serialize(),
-					success: function (msg) {
-						$(that.currentForm).trigger('reset');
-						$.magnificPopup.open({
-							items: {
-								src: "#popup-success"
-							},
-							callbacks: {
-								open: function () {
-									setTimeout($.magnificPopup.close, 5000);
-								}
-							}
-						});
-						ym(89473462, 'reachGoal', 'form-all');
-					}
-				});
 			}
 		};
 
