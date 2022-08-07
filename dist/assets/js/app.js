@@ -192,7 +192,9 @@ $(() => {
 		autoplay: true,
 		autoplaySpeed: 2000,
 		speed: 1000,
-		variableWidth: true
+		variableWidth: true,
+		pauseOnHover: false,
+		pauseOnFocus: false
 
 	});
 
@@ -206,7 +208,9 @@ $(() => {
 		autoplaySpeed: 2000,
 		speed: 1000,
 		rtl: true,
-		variableWidth: true
+		variableWidth: true,
+		pauseOnHover: false,
+		pauseOnFocus: false
 	});
 
 	$(".reviews-slaider").slick({
