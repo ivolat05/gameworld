@@ -1,1 +1,1 @@
-.header{padding-top:10px}.nav-list-link{font-weight:500;font-size:16px;line-height:100%;text-transform:lowercase;color:#131313;padding-left:35px;position:relative;top:-10px}.nav-list-link:hover{opacity:.8}.logo-img{width:163px;height:75px}
+.header{padding-top:10px;position:fixed;left:0;right:0;top:0;z-index:3}.nav-list-link{font-weight:500;font-size:16px;line-height:100%;text-transform:lowercase;color:#131313;padding-left:35px;position:relative;top:-10px}.nav-list-link:hover{opacity:.8}.logo-img{width:163px;height:75px}
