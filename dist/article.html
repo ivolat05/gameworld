@@ -35,15 +35,18 @@
 	<link rel="stylesheet" href="assets/css/global.min.css">
 	<link rel="stylesheet" href="assets/css/index.min.css">
 	<link rel="stylesheet" href="assets/css/blog.min.css">
+	<link rel="stylesheet" href="assets/css/blog-blog.min.css">
 	<link rel="stylesheet" href="assets/css/footer.min.css">
 	<link rel="stylesheet" href="assets/css/found.min.css">
 	<link rel="stylesheet" href="assets/css/article.min.css">
-	
+	<link rel="stylesheet" href="assets/css/breadcrumb.min.css">
 	<link rel="stylesheet" href="assets/css/modal.min.css">
 </head>
 
 <body>
 	<div class="page d-flex flex-column">
+		<!--header-scroling - включение фиксированой шапки
+		header-scroling-back- включение фона header-->
 		<header class="header">
 			<div class="container">
 				<div class="header-wrapp d-flex justify-content-between align-items-center">
@@ -92,6 +95,41 @@
 				</div>
 			</div>
 		</header>
+		<section class="breadcrumb breadcrumb-padding">
+			<div class="container">
+				<div class="breadcrumb-wrapp">
+					<h3 class="breadcrumb-title">
+						блог
+					</h3>
+					<ul class="breadcrumb-list">
+						<li class="breadcrumb-list-inner">
+							<a href="index.html" aria-label="главная" class="breadcrumb-list-link">
+								главная
+							</a>
+						</li>
+						<li class="breadcrumb-list-inner">
+							блог
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="forms forms-padding">
+			<div class="container">
+				<form id="form-0" action="/" class="forms">
+					<h3 class="forms-title text-center">
+						Получи бесплатную консультацию
+					</h3>
+					<input type="text" name="name" class="forms-input d-block" placeholder="Имя">
+					<input type="tel" name="phone" class="forms-input d-block mask-tell" placeholder="Телефон">
+					<input type="hidden" name="form" value="Получи бесплатную консультацию">
+					<a href="#send" aria-label="Отправить" type="submit"
+						class="forms-btn open-modal d-flex align-items-center justify-content-center">
+						Отправить
+					</a>
+				</form>
+			</div>
+		</section>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-wrapp d-flex justify-content-between">
