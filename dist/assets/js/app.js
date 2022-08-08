@@ -33,23 +33,43 @@ $(() => {
 		let btnActive = document.querySelectorAll(`${button}`);
 		if (btnActive) {
 			btnActive.forEach(item => {
-				item.addEventListener('mouseover', () => {
-					let panel = item.lastElementChild;
-					for (let i = 0; i < btnActive.length; i++) {
-						if (btnActive[i].classList.contains('active')) {
-							btnActive[i].classList.remove('active')
-							btnActive[i].lastElementChild.style.maxHeight = null;
+				item.addEventListener('mousemove', () => {
+					if (window.innerWidth >= 992) {
+						let panel = item.lastElementChild;
+						for (let i = 0; i < btnActive.length; i++) {
+							if (btnActive[i].classList.contains('active')) {
+								btnActive[i].classList.remove('active')
+								btnActive[i].lastElementChild.style.maxHeight = null;
+							}
+						}
+						item.classList.add('active');
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					} else if (window.innerWidth <= 992) {
+						if (item.classList.contains('active')) {
+							item.classList.remove('active')
+							item.lastElementChild.style.maxHeight = null;
+						} else {
+							let panel = item.lastElementChild;
+							for (let i = 0; i < btnActive.length; i++) {
+								if (btnActive[i].classList.contains('active')) {
+									btnActive[i].classList.remove('active')
+									btnActive[i].lastElementChild.style.maxHeight = null;
+								}
+							}
+							item.classList.add('active');
+							panel.style.maxHeight = panel.scrollHeight + "px";
 						}
 					}
-					item.classList.add('active');
-					panel.style.maxHeight = panel.scrollHeight + "px";
-
 				})
 			})
 		}
 	}
 
 	accordionHover(".service-box")
+
+
+
+
 
 	// accordion
 	// button контейнер содержащий тело аккордиона
@@ -58,15 +78,21 @@ $(() => {
 		if (btnActive) {
 			btnActive.forEach(item => {
 				item.addEventListener('click', () => {
-					let panel = item.lastElementChild;
-					for (let i = 0; i < btnActive.length; i++) {
-						if (btnActive[i].classList.contains('active')) {
-							btnActive[i].classList.remove('active')
-							btnActive[i].lastElementChild.style.maxHeight = null;
+					if (item.classList.contains('active')) {
+						item.classList.remove('active')
+						item.lastElementChild.style.maxHeight = null;
+					} else {
+						let panel = item.lastElementChild;
+						for (let i = 0; i < btnActive.length; i++) {
+							if (btnActive[i].classList.contains('active')) {
+								btnActive[i].classList.remove('active')
+								btnActive[i].lastElementChild.style.maxHeight = null;
+							}
 						}
+						item.classList.add('active');
+						panel.style.maxHeight = panel.scrollHeight + "px";
 					}
-					item.classList.add('active');
-					panel.style.maxHeight = panel.scrollHeight + "px";
+
 
 				})
 			})
@@ -74,8 +100,9 @@ $(() => {
 	}
 
 	accordionClick(".quest-box")
-
 	// валидация
+
+
 
 	$('.mask-tell').inputmask("+7 (999) 999-9999", {
 		definitions: {
@@ -279,4 +306,35 @@ $(() => {
 		init();
 	}
 	scrollHorizont('.team-wrapp', '.team-row');
+
+	//menu
+	function menu() {
+		let body = document.querySelector('body');
+		let fonBack = document.querySelector('.fon');
+		let menuOpenBtn = document.querySelector('.header-menu-open');
+		let menuBox = document.querySelector('.header-mob');
+		let menuBtnClose = document.querySelectorAll('.--close');
+		if (menuBtnClose && menuBox && menuOpenBtn && fonBack) {
+			menuOpenBtn.addEventListener('click', () => {
+				body.classList.add('stop');
+				menuBox.classList.add('active');
+				fonBack.classList.add('active');
+			})
+			fonBack.addEventListener('click', () => {
+				body.classList.remove('stop');
+				menuBox.classList.remove('active');
+				fonBack.classList.remove('active');
+			})
+			menuBtnClose.forEach(item => {
+				item.addEventListener('click', () => {
+					body.classList.remove('stop');
+					menuBox.classList.remove('active');
+					fonBack.classList.remove('active');
+				})
+			})
+
+		}
+	}
+
+	menu();
 })
