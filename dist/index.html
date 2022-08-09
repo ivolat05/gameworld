@@ -30,17 +30,8 @@
 	<link rel="stylesheet" href="assets/css/magnific-popup.min.css">
 	<link rel="stylesheet" href="assets/css/slick.min.css">
 	<link rel="stylesheet" href="assets/css/reset.min.css">
-	<link rel="stylesheet" href="assets/css/head.min.css">
-	<link rel="stylesheet" href="assets/css/main.min.css">
-	<link rel="stylesheet" href="assets/css/global.min.css">
-	<link rel="stylesheet" href="assets/css/index.min.css">
-	<link rel="stylesheet" href="assets/css/blog.min.css">
-	<link rel="stylesheet" href="assets/css/blog-blog.min.css">
-	<link rel="stylesheet" href="assets/css/footer.min.css">
-	<link rel="stylesheet" href="assets/css/found.min.css">
-	<link rel="stylesheet" href="assets/css/article.min.css">
-	<link rel="stylesheet" href="assets/css/breadcrumb.min.css">
-	<link rel="stylesheet" href="assets/css/modal.min.css">
+	<link rel="stylesheet" href="assets/css/aos.min.css">
+	<link rel="stylesheet" href="assets/css/style.min.css">
 	<link rel="stylesheet" href="assets/css/adaptive.min.css">
 </head>
 
@@ -53,11 +44,12 @@
 			<div class="container">
 				<div class="header-wrapp d-flex justify-content-between align-items-start align-items-lg-center">
 					<a aria-label="Лого" href="index.html" class="logo">
-						<img width="163" height="75" src="./assets/img/header/logo.svg" alt="" class="logo-img">
+						<img loading="lazy" width="163" height="75" src="./assets/img/header/logo.svg" alt="" class="logo-img">
 					</a>
 		
 					<nav class="nav-box header-mob">
-						<button class="header-menu-close --close d-lg-none d-flex align-items-center justify-content-center">
+						<button aria-label="Закрыть"
+							class="header-menu-close --close d-lg-none d-flex align-items-center justify-content-center">
 							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<rect x="12.5977" y="40.5981" width="39.598" height="3.9598"
 									transform="rotate(-45 12.5977 40.5981)" fill="#A9216B" />
@@ -103,7 +95,8 @@
 							</li>
 						</ul>
 					</nav>
-					<button class="header-menu-open d-lg-none d-flex align-items-center justify-content-center">
+					<button aria-label="открыть"
+						class="header-menu-open d-lg-none d-flex align-items-center justify-content-center">
 						<svg width="35" height="21" viewBox="0 0 35 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect width="35" height="3" fill="#48092B" />
 							<rect y="9" width="35" height="3" fill="#48092B" />
@@ -114,7 +107,7 @@
 				</div>
 			</div>
 		</header>
-		<main class="main">
+		<main class="main" data-aos="fade-left">
 			<div class="container">
 				<div class="main-wrapp d-flex justify-content-between flex-column flex-lg-row-reverse">
 					<div class="main-wrap-row ">
@@ -148,7 +141,7 @@
 		<section id="about" class="about about-pading">
 			<div class="container">
 				<div class="about-wrapp d-lg-flex d-block justify-content-between">
-					<div class="about-coll">
+					<div data-aos="fade-right" class="about-coll">
 						<h3 class="title about-coll-title text-lg-end text-start">
 							Находим сильные
 						</h3>
@@ -158,7 +151,7 @@
 						</h3>
 		
 					</div>
-					<div class="about-coll-2 d-lg-flex d-block justify-content-between">
+					<div data-aos="fade-left" class="about-coll-2 d-lg-flex d-block justify-content-between">
 						<h4 class="about-title">
 							о компании
 						</h4>
@@ -184,7 +177,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="why">
+		<section data-aos="fade-down" class="why">
 			<div class="container">
 				<div class="why-wrapp">
 					<h3 class="why-title subtitle">
@@ -226,8 +219,8 @@
 		</section>
 		<section class="missions missions-padding">
 			<div class="container">
-				<div class="missions-wrapp d-flex justify-content-between">
-					<div class="missions-coll">
+				<div class="missions-wrapp d-block d-lg-flex justify-content-between">
+					<div data-aos="fade-right" class="missions-coll ">
 						<h3 class="title missions-title missions-title-text text-lg-end text-start">
 							Наша миссия-
 						</h3>
@@ -236,7 +229,7 @@
 						</h3>
 		
 					</div>
-					<div class="missions-coll-2 ">
+					<div data-aos="fade-left" class="missions-coll-2 ">
 		
 						<div class="missions-coll-row ">
 							<h3 class="missions-coll-title">
@@ -288,13 +281,12 @@
 				</div>
 			</div>
 		</section>
-	
 		<section class="premium premium-padding">
 			<div class="container">
-				<div class="premium-wrap d-flex justify-content-between">
-					<div class="premium-box">
+				<div class="premium-wrap d-block d-lg-flex justify-content-between">
+					<div data-aos="fade-up-right" class="premium-box">
 						<div class="premium-box-head position-relative">
-							<img width="284" height="284" src="./assets/img/premium/premium-1.png" alt=""
+							<img loading="lazy" width="284" height="284" src="./assets/img/premium/premium-1.png" alt=""
 								class="premium-box-img d-block">
 						</div>
 						<h3 class="premium-box-title  text-center">
@@ -303,9 +295,9 @@
 							клиентов - 2022
 						</h3>
 					</div>
-					<div class="premium-box">
+					<div class="premium-box" data-aos="fade-up-left">
 						<div class="premium-box-head position-relative">
-							<img width="284" height="284" src="./assets/img/premium/premium-2.png" alt=""
+							<img loading="lazy" width="284" height="284" src="./assets/img/premium/premium-2.png" alt=""
 								class="premium-box-img d-block">
 						</div>
 						<h3 class="premium-box-title premium-box-title--fix text-center">
@@ -315,17 +307,24 @@
 				</div>
 			</div>
 		</section>
-		<section id="service" class="service service-padding">
+		<section id="service" data-aos="zoom-in" class="service service-padding">
 			<div class="container">
 				<h3 class="suttitle service-subtitle">
 					услуги
 				</h3>
 				<div class="service-wrapp">
 					<div class="service-box  ">
-						<div class="service-head">
+						<div class="service-head  align-items-center  d-flex justify-content-between">
 							<h4 class=" service-head-title">
 								Создание и продвижение личного бренда
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
+		
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -342,10 +341,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head align-items-center  align-items-center d-flex justify-content-between">
 							<h4 class="  service-head-title">
 								Продвижение IT-проектов
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -361,10 +366,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head  align-items-center d-flex justify-content-between">
 							<h4 class=" service-head-title">
 								Event и нетворкинг
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -377,10 +388,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head  align-items-center d-flex justify-content-between">
 							<h4 class=" service-head-title">
 								Разработка коммуникационной стратегии
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -393,10 +410,17 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head  align-items-center d-flex justify-content-between">
 							<h4 class=" service-head-title">
-								Комплексное PR-продвижение
+								Комплексное <span class="service-head-fix">PR-продвижение</span>
+		
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text service-body-text-padding">
@@ -430,10 +454,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head   align-items-center d-flex justify-content-between">
 							<h4 class="  service-head-title">
 								Реклама у блогеров
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -446,10 +476,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head  align-items-center d-flex justify-content-between">
 							<h4 class="  service-head-title">
 								Работа с репутацией в сети
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -467,10 +503,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head  align-items-center d-flex justify-content-between">
 							<h4 class="  service-head-title">
 								Интервью и экспертные колонки для портфолио
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -484,10 +526,16 @@
 					</div>
 		
 					<div class="service-box">
-						<div class="service-head">
+						<div class="service-head  align-items-center d-flex justify-content-between">
 							<h4 class=" service-head-title">
 								Тренинги по эффективным коммуникациям
 							</h4>
+							<svg class="d-block d-lg-none" width="26" height="12" viewBox="0 0 26 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
+									fill="#939393" />
+							</svg>
 						</div>
 						<div class="service-body">
 							<p class="service-body-text">
@@ -505,11 +553,11 @@
 		</section>
 		<section class="founder founder-padding">
 			<div class="container">
-				<h3 class="subtitle founder-subtitle">
+				<h3 data-aos="fade-down" class="subtitle founder-subtitle">
 					основатель PR-агентства
 				</h3>
 				<div class="founder-wrapp">
-					<div class="founder-coll">
+					<div data-aos="fade-right" class="founder-coll">
 						<h4 class="founter-title">
 							Екатерина Макарова
 						</h4>
@@ -535,12 +583,12 @@
 								</p>
 							</li>
 							<li class="founder-list-inner">
-								<p class="founder-list-text">
+								<p class="founder-list-text ">
 									Преподаватель международной академии дополнительного образования Edpro на курсе “Удаленный
 									PR-специалист”</p>
 							</li>
 							<li class="founder-list-inner">
-								<p class="founder-list-text">
+								<p class="founder-list-text  --padding">
 									Окончила факультет журналистики МГУ имени М.В. Ломоносова
 								</p>
 							</li>
@@ -559,7 +607,8 @@
 						</ul>
 					</div>
 		
-					<img width="539" height="682" src="./assets/img/founder/founder.jpg" alt="" class="founder-img">
+					<img loading="lazy" data-aos="fade-left" width="539" height="682" src="./assets/img/founder/founder.jpg"
+						alt="" class="founder-img">
 		
 					<p class="founder-subtext">
 						Хочешь узнать подробнее, как наше агентство эффективно работает в удаленном формате, слушай подкаст
@@ -571,7 +620,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="beta beta-padding">
+		<section data-aos="flip-up" class="beta d-lg-block d-none beta-padding">
 			<div class="container">
 				<div class="beta-wrapp d-flex align-items-center justify-content-between">
 					<div class="beta-coll">
@@ -595,15 +644,15 @@
 				</div>
 			</div>
 		</section>
-		<section class="process process-padding">
-			<div class="container">
+		<section data-aos="zoom-out" class="process process-padding">
+			<div class="container process-container">
 				<a href="#popup" aria-label="узнать больше" class="button open-modal  process-link">
 					узнать больше
 				</a>
 				<h3 class="process-title">
 					процесс
 				</h3>
-				<div class="process-wrap d-flex justify-content-between">
+				<div class="process-wrap d-flex flex-wrap justify-content-evenly justify-content-lg-between">
 		
 					<div class="process-box">
 						<div class="process-box-inner">
@@ -641,20 +690,26 @@
 								04
 							</h3>
 							<p class="process-box-text text-center">
-								Курируем выход PR-<br>активности<br> и получаем результаты!
+								<span class="process-box-fix-2">Курируем выход PR-</span> <span
+									class="process-box-fix">активности и </span>получаем
+								<span class="process-box-fix-3">
+									результаты!
+								</span>
+		
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-	
 		<section id="cases" class="cases cases-padding">
-			<div class="container">
+			<div class="container cases-container-link">
 				<a href="#" aria-label="ПОСЛЕДНИЕ КЕЙСЫ С РЕЗУЛЬТАТАМИ" class="cases-link">
 					ПОСЛЕДНИЕ КЕЙСЫ С РЕЗУЛЬТАТАМИ
 				</a>
-				<h3 class="sutitle cases-subtitle">
+			</div>
+			<div class="container">
+				<h3 data-aos="fade-right" class="sutitle cases-subtitle">
 					Кейсы
 				</h3>
 				<div class="cases-box-btn d-flex justify-content-end">
@@ -676,12 +731,12 @@
 					</button>
 				</div>
 			</div>
-			<div class="cases-wrapp">
+			<div data-aos="fade-left" class="cases-wrapp">
 				<div class="container">
 					<div class="cases-slaider">
 						<div>
 							<div class="cases-box">
-								<img src="./assets/img/cases/cases-1.jpg" alt="" class="cases-box-img">
+								<img loading="lazy" src="./assets/img/cases/cases-1.jpg" alt="" class="cases-box-img">
 								<a href="#" aria-label="PR для крупных бизнес-мероприятий" class="cases-box-link">
 									PR для крупных бизнес-мероприятий
 								</a>
@@ -698,7 +753,7 @@
 						</div>
 						<div>
 							<div class="cases-box">
-								<img src="./assets/img/cases/cases-2.jpg" alt="" class="cases-box-img">
+								<img loading="lazy" src="./assets/img/cases/cases-2.jpg" alt="" class="cases-box-img">
 								<a href="" aria-label="PR для стартапов" class="cases-box-link">PR для стартапов</a>
 								<div></div>
 								<p class="cases-box-text">
@@ -716,7 +771,7 @@
 						</div>
 						<div>
 							<div class="cases-box">
-								<img src="./assets/img/cases/cases-3.jpg" alt="" class="cases-box-img">
+								<img loading="lazy" src="./assets/img/cases/cases-3.jpg" alt="" class="cases-box-img">
 								<a href="" aria-label="PR для первых лиц" class="cases-box-link">
 									PR для первых лиц
 								</a>
@@ -737,7 +792,7 @@
 						</div>
 						<div>
 							<div class="cases-box">
-								<img src="./assets/img/cases/cases-4.jpg" alt="" class="cases-box-img">
+								<img loading="lazy" src="./assets/img/cases/cases-4.jpg" alt="" class="cases-box-img">
 								<a href="" aria-label="PR для крупных бизнес-мероприятий" class="cases-box-link">
 									PR для крупных бизнес-мероприятий
 								</a>
@@ -759,10 +814,8 @@
 				</div>
 			</div>
 		</section>
-		<!---->
 	</div>
-	
-	<section id="team" class="team team-padding">
+	<section data-aos="zoom-in" id="team" class="team team-padding">
 		<div class="team-container">
 			<div class="team-weight">
 				<div class="team-head">
@@ -781,7 +834,8 @@
 						<p class="team-job">
 							Основатель PR-агентства
 						</p>
-						<img width="473" height="624" src="./assets/img/team/team-1.jpg" alt="" class="team-img">
+						<img loading="lazy" width="473" height="624" src="./assets/img/team/team-1.jpg" alt=""
+							class="team-img">
 					</div>
 	
 					<div class="team-box">
@@ -791,7 +845,8 @@
 						<p class="team-job">
 							Финансовый менеджер
 						</p>
-						<img width="473" height="624" src="./assets/img/team/team-2.jpg" alt="" class="team-img">
+						<img loading="lazy" width="473" height="624" src="./assets/img/team/team-2.jpg" alt=""
+							class="team-img">
 					</div>
 	
 					<div class="team-box">
@@ -801,7 +856,8 @@
 						<p class="team-job">
 							HR-специалист
 						</p>
-						<img width="473" height="624" src="./assets/img/team/team-3.jpg" alt="" class="team-img">
+						<img loading="lazy" width="473" height="624" src="./assets/img/team/team-3.jpg" alt=""
+							class="team-img">
 					</div>
 	
 					<div class="team-box">
@@ -811,7 +867,8 @@
 						<p class="team-job">
 							PR-менеджер
 						</p>
-						<img width="473" height="624" src="./assets/img/team/team-4.jpg" alt="" class="team-img">
+						<img loading="lazy" width="473" height="624" src="./assets/img/team/team-4.jpg" alt=""
+							class="team-img">
 					</div>
 	
 					<div class="team-box">
@@ -821,7 +878,8 @@
 						<p class="team-job">
 							PR-менеджер
 						</p>
-						<img width="473" height="624" src="./assets/img/team/team-5.jpg" alt="" class="team-img">
+						<img loading="lazy" width="473" height="624" src="./assets/img/team/team-5.jpg" alt=""
+							class="team-img">
 					</div>
 	
 					<div class="team-box">
@@ -831,8 +889,10 @@
 						<p class="team-job">
 							PR-менеджер
 						</p>
-						<img width="473" height="624" src="./assets/img/team/team-6.jpg" alt="" class="team-img">
+						<img loading="lazy" width="473" height="624" src="./assets/img/team/team-6.jpg" alt=""
+							class="team-img">
 					</div>
+	
 	
 				</div>
 			</div>
@@ -841,67 +901,67 @@
 	</section>
 	<div class="page page-index d-flex flex-column">
 		<section id="clients" class="clients clients-padding">
-			<div class="container">
+			<div data-aos="fade-down" class="container">
 				<h3 class="subtitle clients-subtitle">
 					клиенты
 				</h3>
 			</div>
-			<div class="clients-right">
+			<div data-aos="fade-right" class="clients-right">
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-1.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-1.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-2.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-2.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 		
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-3.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-3.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-4.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-4.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-5.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-5.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-6.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-6.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-7.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-7.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 				<div>
 					<div class="clients-box d-flex align-items-center justify-content-center">
-						<img width="163" height="82" src="./assets/img/clients/clients-8.png" alt=""
+						<img loading="lazy" width="163" height="82" src="./assets/img/clients/clients-8.png" alt=""
 							class="clients-box-img d-block">
 					</div>
 				</div>
 			</div>
-			<div class="clients-row-left" dir="rtl">
+			<div data-aos="fade-left" class="clients-row-left" dir="rtl">
 				<div>
 					<div class="clients-container">
 						<div class="clients-line d-flex align-items-center justify-content-center">
-							<img width="185" height="185" src="./assets/img/clients/clients-face-1.png" alt=""
+							<img loading="lazy" width="185" height="185" src="./assets/img/clients/clients-face-1.png" alt=""
 								class="clients-img d-block">
 		
 						</div>
@@ -913,7 +973,7 @@
 				<div>
 					<div class="clients-container">
 						<div class="clients-line d-flex align-items-center justify-content-center">
-							<img width="185" height="185" src="./assets/img/clients/clients-face-2.png" alt=""
+							<img loading="lazy" width="185" height="185" src="./assets/img/clients/clients-face-2.png" alt=""
 								class="clients-img d-block">
 		
 						</div>
@@ -925,7 +985,7 @@
 				<div>
 					<div class="clients-container">
 						<div class="clients-line d-flex align-items-center justify-content-center">
-							<img width="185" height="185" src="./assets/img/clients/clients-face-3.png" alt=""
+							<img loading="lazy" width="185" height="185" src="./assets/img/clients/clients-face-3.png" alt=""
 								class="clients-img d-block">
 		
 						</div>
@@ -937,7 +997,7 @@
 				<div>
 					<div class="clients-container">
 						<div class="clients-line d-flex align-items-center justify-content-center">
-							<img width="185" height="185" src="./assets/img/clients/clients-face-4.png" alt=""
+							<img loading="lazy" width="185" height="185" src="./assets/img/clients/clients-face-4.png" alt=""
 								class="clients-img d-block">
 		
 						</div>
@@ -949,7 +1009,7 @@
 				<div>
 					<div class="clients-container">
 						<div class="clients-line d-flex align-items-center justify-content-center">
-							<img width="185" height="185" src="./assets/img/clients/clients-face-5.png" alt=""
+							<img loading="lazy" width="185" height="185" src="./assets/img/clients/clients-face-5.png" alt=""
 								class="clients-img d-block">
 		
 						</div>
@@ -963,10 +1023,10 @@
 		</section>
 		<section class="quest quest-padding">
 			<div class="container">
-				<h3 class="quest-subtitle">
+				<h3 data-aos="fade-down" class="quest-subtitle">
 					Популярные вопросы
 				</h3>
-				<div class="quest-wrapp d-flex justify-content-between">
+				<div data-aos="zoom-in-down" class="quest-wrapp d-xl-flex d-block justify-content-between">
 					<div class="quest-coll">
 						<div class="quest-box">
 							<div class="quest-head ">
@@ -1200,17 +1260,18 @@
 			</div>
 		</section>
 		<section id="blog" class="blog blog-padding">
-			<div class="container">
+			<div class="container blog-container">
 				<a href="#" aria-label="смотреть еще" class="blog-link">
 					смотреть еще
 				</a>
-				<h3 class="subtitle blog-subtitle">
+				<h3 data-aos="fade-down" class="subtitle blog-subtitle">
 					блог
 				</h3>
-				<div class="blog-wrap">
+				<div data-aos="fade-up" class="blog-wrap ">
 					<div class="blog-box ">
-						<a href="#" aria-lable="Советы по продвижению личного бренда в бьюти-сфере" class="blog-img-box">
-							<img width="215" height="182" src="./assets/img/blog/blog-1.jpg" alt="" class="blog-box-img">
+						<a href="#" aria-label="Советы по продвижению личного бренда в бьюти-сфере" class="blog-img-box">
+							<img loading="lazy" width="215" height="182" src="./assets/img/blog/blog-1.jpg" alt=""
+								class="blog-box-img">
 						</a>
 						<div class="blog-box-coll">
 							<time class="blog-time" datetime="2022-05-22">22/05/22</time>
@@ -1224,8 +1285,9 @@
 					</div>
 		
 					<div class="blog-box">
-						<a href="#" aria-lable="Как настроить сарафанное радио на свою волну?" class="blog-img-box">
-							<img width="215" height="182" src="./assets/img/blog/blog-2.jpg" alt="" class="blog-box-img"></a>
+						<a href="#" aria-label="Как настроить сарафанное радио на свою волну?" class="blog-img-box">
+							<img loading="lazy" width="215" height="182" src="./assets/img/blog/blog-2.jpg" alt=""
+								class="blog-box-img"></a>
 						<div class="blog-box-coll">
 							<time class="blog-time" datetime="2022-05-22">22/05/22</time>
 							<a href="#" aria-label="Как настроить сарафанное радио на свою волну?" class="blog-box-title">
@@ -1238,8 +1300,9 @@
 					</div>
 		
 					<div class="blog-box">
-						<a href="#" aria-lable="Почему рекламные бюджеты уходят в соцсети?" class="blog-img-box">
-							<img width="215" height="182" src="./assets/img/blog/blog-3.jpg" alt="" class="blog-box-img"></a>
+						<a href="#" aria-label="Почему рекламные бюджеты уходят в соцсети?" class="blog-img-box">
+							<img loading="lazy" width="215" height="182" src="./assets/img/blog/blog-3.jpg" alt=""
+								class="blog-box-img"></a>
 						<div class="blog-box-coll">
 							<time class="blog-time" datetime="2022-05-22">22/05/22</time>
 							<a href="#" aria-label="Почему рекламные бюджеты уходят в соцсети?" class="blog-box-title">
@@ -1252,8 +1315,9 @@
 					</div>
 		
 					<div class="blog-box">
-						<a href="#" aria-lable="Чем отличается реклама от PR" class="blog-img-box">
-							<img width="215" height="182" src="./assets/img/blog/blog-4.jpg" alt="" class="blog-box-img"></a>
+						<a href="#" aria-label="Чем отличается реклама от PR" class="blog-img-box">
+							<img loading="lazy" width="215" height="182" src="./assets/img/blog/blog-4.jpg" alt=""
+								class="blog-box-img"></a>
 						<div class="blog-box-coll">
 							<time class="blog-time" datetime="2022-05-22">22/05/22</time>
 							<a href="#" aria-label="Чем отличается реклама от PR" class="blog-box-title">
@@ -1269,15 +1333,15 @@
 			</div>
 		</section>
 		<section id="reviews" class="reviews reviews-padding">
-			<div class="container">
+			<div class="container reviews-container ">
 				<div class="reviews-wrapp">
-					<div class="reviews-coll">
+					<div data-aos="fade-right" class="reviews-coll">
 						<h3 class="reviews-title">
 							Отзывы
 						</h3>
 					</div>
-					<div class="reviews-coll-2">
-						<div class="reviews-container-btn d-flex justify-content-end">
+					<div data-aos="fade-left" class="reviews-coll-2">
+						<div class="reviews-container-btn d-flex justify-content-start justify-content-lg-end">
 							<button aria-label="предыдущий" class="reviews-box-btn reviews-box-prev">
 								<svg width="94" height="33" viewBox="0 0 94 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path class="reviews-box-stroke"
@@ -1304,8 +1368,8 @@
 							<div>
 								<div class="reviews-box">
 									<div class="reviews-box-head">
-										<img width="82" height="82" src="./assets/img/reviews/reviews-1.jpg" alt=""
-											class="reviews-img">
+										<img loading="lazy" width="82" height="82" src="./assets/img/reviews/reviews-1.jpg"
+											alt="" class="reviews-img">
 										<div class="reviews-head-coll">
 											<h4 class="reviews-name">
 												Марина Головина
@@ -1334,8 +1398,8 @@
 							<div>
 								<div class="reviews-box">
 									<div class="reviews-box-head">
-										<img width="82" height="82" src="./assets/img/reviews/reviews-2.jpg" alt=""
-											class="reviews-img">
+										<img loading="lazy" width="82" height="82" src="./assets/img/reviews/reviews-2.jpg"
+											alt="" class="reviews-img">
 										<div class="reviews-head-coll">
 											<h4 class="reviews-name">
 												Роман Кумар Виас
@@ -1366,8 +1430,8 @@
 							<div>
 								<div class="reviews-box">
 									<div class="reviews-box-head">
-										<img width="82" height="82" src="./assets/img/reviews/reviews-4.jpg" alt=""
-											class="reviews-img">
+										<img loading="lazy" width="82" height="82" src="./assets/img/reviews/reviews-4.jpg"
+											alt="" class="reviews-img">
 										<div class="reviews-head-coll">
 											<h4 class="reviews-name">
 												Александр Петров
@@ -1399,8 +1463,8 @@
 							<div>
 								<div class="reviews-box">
 									<div class="reviews-box-head">
-										<img width="82" height="82" src="./assets/img/reviews/reviews-4.jpg" alt=""
-											class="reviews-img">
+										<img loading="lazy" width="82" height="82" src="./assets/img/reviews/reviews-4.jpg"
+											alt="" class="reviews-img">
 										<div class="reviews-head-coll">
 											<h4 class="reviews-name">
 												Александр Петров
@@ -1439,7 +1503,7 @@
 		<section class="forms forms-padding">
 			<div class="container">
 				<form id="form-0" action="/" class="forms">
-					<h3 class="forms-title text-center">
+					<h3 class="forms-title text-lg-center text-start">
 						Получи бесплатную консультацию
 					</h3>
 					<input type="text" name="name" class="forms-input d-block" placeholder="Имя">
@@ -1454,9 +1518,10 @@
 		</section>
 		<footer class="footer">
 			<div class="container">
-				<div class="footer-wrapp d-flex justify-content-between">
+				<div class="footer-wrapp d-lg-flex d-block justify-content-between">
 					<a href="index.html" aria-label="Лого" class="footer-logo">
-						<img width="358" height="166" src="./assets/img/header/logo.svg" alt="" class="footer-logo-img">
+						<img loading="lazy" width="358" height="166" src="./assets/img/header/logo.svg" alt=""
+							class="footer-logo-img">
 					</a>
 					<div class="footer-center">
 						<a href="mailto:pr@pr-igraslov.ru" aria-label="pr@pr-igraslov.ru"
@@ -1470,7 +1535,7 @@
 						<a href="#" aria-label="youtube" class="footer-btn">youtube</a>
 					</div>
 				</div>
-				<div class="footer-row d-flex justify-content-between">
+				<div class="footer-row d-lg-flex d-block  justify-content-between">
 					<h3 class="footer-row-title">
 						ИП Макарова Е. И. ОГРН
 						<span>317774600549836</span>
@@ -1484,9 +1549,7 @@
 				</div>
 			</div>
 		</footer>
-	
 	</div>
-	<!--
 	<div id="popup" class="popup mfp-hide">
 		<button aria-label="закрыть окно" class="popup-close">
 			<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1518,7 +1581,6 @@
 			конфиденциальности.
 		</p>
 	</div>
-	-->
 	<!--заявка принита-->
 	<div id="send" class="sent mfp-hide d-flex flex-column align-items-center justify-content-center">
 		<button aria-label="закрыть окно" class="popup-close">
@@ -1538,7 +1600,14 @@
 	</div>
 	<div class="fon"></div>
 	
+
 	<script src="assets/js/app.min.js" defer></script>
+	<script src="assets/js/accordion.min.js" defer></script>
+	<script src="assets/js/cases.min.js" defer></script>
+	<script src="assets/js/scrollHorixont.min.js" defer></script>
+	<script src="assets/js/clients-slider.min.js" defer></script>
+	<script src="assets/js/reviews-slaider.min.js" defer></script>
+	<script src="assets/js/popup.min.js" defer></script>
 </body>
 
 

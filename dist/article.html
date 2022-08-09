@@ -30,17 +30,8 @@
 	<link rel="stylesheet" href="assets/css/magnific-popup.min.css">
 	<link rel="stylesheet" href="assets/css/slick.min.css">
 	<link rel="stylesheet" href="assets/css/reset.min.css">
-	<link rel="stylesheet" href="assets/css/head.min.css">
-	<link rel="stylesheet" href="assets/css/main.min.css">
-	<link rel="stylesheet" href="assets/css/global.min.css">
-	<link rel="stylesheet" href="assets/css/index.min.css">
-	<link rel="stylesheet" href="assets/css/blog.min.css">
-	<link rel="stylesheet" href="assets/css/blog-blog.min.css">
-	<link rel="stylesheet" href="assets/css/footer.min.css">
-	<link rel="stylesheet" href="assets/css/found.min.css">
-	<link rel="stylesheet" href="assets/css/article.min.css">
-	<link rel="stylesheet" href="assets/css/breadcrumb.min.css">
-	<link rel="stylesheet" href="assets/css/modal.min.css">
+	<link rel="stylesheet" href="assets/css/aos.min.css">
+	<link rel="stylesheet" href="assets/css/style.min.css">
 	<link rel="stylesheet" href="assets/css/adaptive.min.css">
 </head>
 
@@ -53,11 +44,12 @@
 			<div class="container">
 				<div class="header-wrapp d-flex justify-content-between align-items-start align-items-lg-center">
 					<a aria-label="Лого" href="index.html" class="logo">
-						<img width="163" height="75" src="./assets/img/header/logo.svg" alt="" class="logo-img">
+						<img loading="lazy" width="163" height="75" src="./assets/img/header/logo.svg" alt="" class="logo-img">
 					</a>
 		
 					<nav class="nav-box header-mob">
-						<button class="header-menu-close --close d-lg-none d-flex align-items-center justify-content-center">
+						<button aria-label="Закрыть"
+							class="header-menu-close --close d-lg-none d-flex align-items-center justify-content-center">
 							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<rect x="12.5977" y="40.5981" width="39.598" height="3.9598"
 									transform="rotate(-45 12.5977 40.5981)" fill="#A9216B" />
@@ -103,7 +95,8 @@
 							</li>
 						</ul>
 					</nav>
-					<button class="header-menu-open d-lg-none d-flex align-items-center justify-content-center">
+					<button aria-label="открыть"
+						class="header-menu-open d-lg-none d-flex align-items-center justify-content-center">
 						<svg width="35" height="21" viewBox="0 0 35 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect width="35" height="3" fill="#48092B" />
 							<rect y="9" width="35" height="3" fill="#48092B" />
@@ -140,7 +133,7 @@
 		</section>
 		<article class="article">
 			<div class="container">
-				<img width="1462" height="562" src="./assets/img/article.jpg" alt="" class="article-img">
+				<img loading="lazy" width="1462" height="562" src="./assets/img/article.jpg" alt="" class="article-img">
 				<div class="article-wrapp">
 					<p class="article-text">
 						Конкуренция в бизнесе очень высока. Выбиться в первые ряды помогают маркетинговые инструменты, главными
@@ -209,7 +202,7 @@
 					</h3>
 					<div class="like-wrapp d-flex justify-content-start">
 						<div class="like-box">
-							<img width="312" height="182" src="./assets/img/like.jpg" alt="" class="like-img">
+							<img loading="lazy" width="312" height="182" src="./assets/img/like.jpg" alt="" class="like-img">
 							<div class="like-box-wrapp">
 								<time class="like-time" datetime="2022-05-22">22/05/22</time>
 								<a href="#" aria-label="Как настроить сарафанное радио на свою волну?" class="like-box-title">
@@ -221,7 +214,7 @@
 							</div>
 						</div>
 						<div class="like-box">
-							<img width="312" height="182" src="./assets/img/like.jpg" alt="" class="like-img">
+							<img loading="lazy" width="312" height="182" src="./assets/img/like.jpg" alt="" class="like-img">
 							<div class="like-box-wrapp">
 								<time class="like-time" datetime="2022-05-22">22/05/22</time>
 								<a href="#" aria-label="Как настроить сарафанное радио на свою волну?" class="like-box-title">
@@ -233,7 +226,7 @@
 							</div>
 						</div>
 						<div class="like-box">
-							<img width="312" height="182" src="./assets/img/like.jpg" alt="" class="like-img">
+							<img loading="lazy" width="312" height="182" src="./assets/img/like.jpg" alt="" class="like-img">
 							<div class="like-box-wrapp">
 								<time class="like-time" datetime="2022-05-22">22/05/22</time>
 								<a href="#" aria-label="Как настроить сарафанное радио на свою волну?" class="like-box-title">
@@ -251,7 +244,7 @@
 		<section class="forms forms-padding">
 			<div class="container">
 				<form id="form-0" action="/" class="forms">
-					<h3 class="forms-title text-center">
+					<h3 class="forms-title text-lg-center text-start">
 						Получи бесплатную консультацию
 					</h3>
 					<input type="text" name="name" class="forms-input d-block" placeholder="Имя">
@@ -266,9 +259,10 @@
 		</section>
 		<footer class="footer">
 			<div class="container">
-				<div class="footer-wrapp d-flex justify-content-between">
+				<div class="footer-wrapp d-lg-flex d-block justify-content-between">
 					<a href="index.html" aria-label="Лого" class="footer-logo">
-						<img width="358" height="166" src="./assets/img/header/logo.svg" alt="" class="footer-logo-img">
+						<img loading="lazy" width="358" height="166" src="./assets/img/header/logo.svg" alt=""
+							class="footer-logo-img">
 					</a>
 					<div class="footer-center">
 						<a href="mailto:pr@pr-igraslov.ru" aria-label="pr@pr-igraslov.ru"
@@ -282,7 +276,7 @@
 						<a href="#" aria-label="youtube" class="footer-btn">youtube</a>
 					</div>
 				</div>
-				<div class="footer-row d-flex justify-content-between">
+				<div class="footer-row d-lg-flex d-block  justify-content-between">
 					<h3 class="footer-row-title">
 						ИП Макарова Е. И. ОГРН
 						<span>317774600549836</span>
@@ -316,7 +310,14 @@
 	</div>
 	<div class="fon"></div>
 	
+
 	<script src="assets/js/app.min.js" defer></script>
+	<script src="assets/js/accordion.min.js" defer></script>
+	<script src="assets/js/cases.min.js" defer></script>
+	<script src="assets/js/scrollHorixont.min.js" defer></script>
+	<script src="assets/js/clients-slider.min.js" defer></script>
+	<script src="assets/js/reviews-slaider.min.js" defer></script>
+	<script src="assets/js/popup.min.js" defer></script>
 </body>
 
 
