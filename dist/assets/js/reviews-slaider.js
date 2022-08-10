@@ -10,7 +10,7 @@ $(() => {
 		prevArrow: $(".reviews-box-prev"),
 		responsive: [
 			{
-				breakpoint: 1200,
+				breakpoint: 1400,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1
